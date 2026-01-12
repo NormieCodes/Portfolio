@@ -5,45 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <title>My Portfolio</title>
 
   <style>
-
+    span {
+      font-weight: bolder;
+    }
   </style>
 
-  <title>My Portfolio</title>
 </head>
+
+
 <body>
-  <!--Navbar Section-->
-  <header>
-    <nav>
-        <div class="navRight">
-          <ul>
-            <li><a href="#home" id="font">Home</a></li>
-            <li><a href="#about" id="font">About</a></li>
-            <li><a href="#skills" id="font">Skills</a></li>
-            <li><a href="#projects" id="font">Projects</a></li>
-            <li><a href="#contact" id="font">Contact Me</a></li>
-          </ul>
-        </div>
-    </nav>
-  </header>
+  <!--Navigation Bar-->
+    <header>
+      <nav class="navbar">
+          <ul id="font" class="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#skill">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!--Hero section-->
-  <section class="hero">
-    <div class="heroLeft">
-      <h1 id="font">Hello! I am <span class="highlight">Rishi Sagaram</span></h1>
-      <p id="font" class="year">B.Tech 2<sup>nd</sup> Year Student</p>
-      <p id="font" class="desc">I am interested in Fullstack.</p>
-
-      <div class="heroRight">
-        <img src="/Assets/rishi.jpeg" alt="Rishi's profile pic">
+    <!--Hero Section-->
+    <section id="home" class="hero">
+      <div class="lefthero">
+        <h1 id="font">Hello, I am <span style="color:red">Rishi Sagaram</span>.</h1>
+        <br>
+        <h2 id="font">B.Tech 2<sup>nd</sup> Year Student.</h2>
+        <p id="font">I am Interested in Fullstack.</p>
       </div>
+      <div class="righthero"><img src="/Assets/rishi.jpeg" alt="Rishi's profile pic"></div>
     </section>
 
-  <div class="empty"></div>
-
- 
+    <section id="aboutme" class="about">
+      <h2 id="font" style="font-size: 30px;">About Me</h2>
+      <p draggable="false">I am Rishi Sagaram, a dedicated 2nd-year student at UPES Dehradun with a passion for Fullstack Development. I am currently honing my expertise in the core fundamentals of HTML, CSS, and JavaScript, maintaining a disciplined daily routine to master the building blocks of the web. My immediate roadmap involves transitioning into the MERN Stack to build robust, end-to-end applications and explore advanced programming architectures.
+      <br>
+      While I am currently focused on intensive learning and skill acquisition, I am about to begin a series of comprehensive projects that apply these technologies in real-world scenarios. You can explore my development journey and view my latest work-in-progress by scrolling down below.</p>
+    </section>
+    
+    
+    <div class="empty"></div>
 </body>
 </html>
