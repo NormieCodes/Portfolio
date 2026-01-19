@@ -207,6 +207,34 @@ body {
   font-style: normal;
 }
 
-.empty {
-  height: 3000px;
+.contact-container {
+  padding: 90px 50px;
+  margin: 50px 20px;
+  background-color: rgb(17, 17, 17);
+  border: 2px solid whitesmoke;
+  border-radius: 2vw;
+  background-color: rgb(17, 17, 17);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.8);
+  /* background-color: wheat;  */
+}
+.contact-container h2 {
+  text-align: center;
+  font-size: 45px;
+  color: white;
+}
+.contact-layout {
+  margin-top: 50px;
+  padding: 50px;
+  color: white;
+  /* background-color: red; */
+}
+
+.contact-layout ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-layout ul a {
+  color: white;
+  text-decoration: none;
 }
