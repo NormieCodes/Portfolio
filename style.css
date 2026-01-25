@@ -440,12 +440,10 @@ body {
       display: none;
     }
     .project-layout {
-      flex: 0 0 100%;
-      flex-basis: 90%;
-      scroll-snap-align: start;
-      max-width: 500px;
-      width: 100%;
-      gap: 12px;
+      flex: 0 0 95%;
+      scroll-snap-align: center;
+      max-width: none;
+      width: 95%;
     }
     .project-title {
       margin-bottom: 10px;
