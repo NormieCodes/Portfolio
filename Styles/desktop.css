@@ -1,0 +1,374 @@
+/* Global*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+}
+
+.font {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+
+/* NAVBAR*/
+.navbar {
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+  border-bottom: 2px solid red;
+  border-bottom-left-radius: 10vw;
+  border-bottom-right-radius: 10vw;
+  box-shadow: 0 0 30px red;
+  transition: box-shadow 0.5s ease;
+}
+
+.navbar:hover {
+  box-shadow: 0 0 45px red;
+}
+
+.navbar .navlist {
+  display: flex;
+  margin-left: auto;
+  gap: 20px;
+}
+
+.navbar .navlist a {
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.navbar .navlist a:hover {
+  color: red;
+  transform: scale(1.05);
+}
+
+
+/* HERO*/
+
+.hero {
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(19, 19, 19);
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 3px solid white;
+  border-bottom-left-radius: 5vw;
+  border-bottom-right-radius: 5vw;
+  box-shadow: inset 0px 0px 20px rgba(158, 6, 6, 0.8);
+}
+
+.lefthero {
+  width: 70%;
+  padding-top: 50px;
+  padding-left: 50px;
+  color: white;
+}
+
+.lefthero p {
+  margin-top: 10px;
+}
+
+.highlight {
+  display: inline-block;
+  color: red;
+  filter: drop-shadow(0 0 10px rgba(155, 16, 16, 0));
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.highlight:hover {
+  transform: scale(1.01);
+  filter: drop-shadow(0 0 10px rgba(155, 16, 16, 0.8));
+}
+
+.righthero {
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.righthero img {
+  width: clamp(180px, 22vw, 300px);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 5px solid white;
+  filter: drop-shadow(0px 5px 20px rgba(152, 152, 152, 0));
+  transition: border 0.5s ease, transform 0.5s ease, filter 0.3s ease;
+}
+
+.righthero img:hover {
+  transform: scale(1.01);
+  filter: drop-shadow(0px 5px 20px rgba(152, 152, 152, 0.8));
+}
+
+
+/* ABOUT*/
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 50px 20px;
+  padding: 120px 50px;
+  gap: 15px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 2vw;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8),
+    inset 0px 0px 20px rgba(7, 198, 140, 0.8);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about:hover {
+  transform: scale(1.008);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9),
+    inset 0px 0px 30px rgba(7, 198, 140, 0.9);
+}
+
+.about h2,
+.about p {
+  display: flex;
+  max-width: 70%;
+  transition: color 0.5s ease, filter 0.5s ease;
+}
+
+.about h2:hover {
+  color: rgba(7, 198, 140, 0.8);
+  filter: drop-shadow(0 0 15px rgba(4, 101, 72, 0.8));
+}
+
+
+/*SKILLS*/
+
+.skills-container {
+  display: grid;
+  margin: 50px 20px;
+  padding: 100px 50px;
+  justify-items: center;
+  border: 2px solid white;
+  border-radius: 2vw;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8),
+    inset 0px 0px 20px rgba(174, 0, 255, 0.8);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.skills-container:hover {
+  transform: scale(1.008);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9),
+    inset 0px 0px 30px rgba(174, 0, 255, 0.9);
+}
+
+.skills-container h2 {
+  display: inline-block;
+  font-size: 45px;
+  color: white;
+  transition: color 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+}
+
+.skills-container h2:hover {
+  color: rgba(174, 0, 255, 0.9);
+  filter: drop-shadow(0 0 15px rgba(68, 4, 97, 0.9));
+}
+
+.all-skills {
+  display: grid;
+  justify-self: stretch;
+  width: 100%;
+  padding: 50px 20px;
+  row-gap: 50px;
+  column-gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.skill-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  border: 2px solid white;
+  border-radius: 2vw;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8),
+    inset 0px 0px 20px rgba(209, 3, 255, 0.8);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-logo:hover {
+  background-color: black;
+  transform: scale(1.08) rotate(5deg);
+  box-shadow: 0 0 20px white;
+}
+
+.skill-logo img {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+}
+
+.skill-name {
+  text-align: center;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+/*PROJECTS*/
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  padding: 120px 50px;
+  margin: 50px 20px;
+  border: 2px solid white;
+  border-radius: 2vw;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8),
+    inset 0px 0px 20px rgba(255, 55, 5, 0.8);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.projects-container:hover {
+  transform: scale(1.008);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9),
+    inset 0px 0px 30px rgba(255, 55, 5, 0.9);
+}
+
+.projects-container h2 {
+  display: inline-block;
+  font-size: 45px;
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.projects-container h2:hover {
+  transform: scale(1.01);
+  color: rgba(255, 55, 5, 0.9);
+}
+
+.all-projects {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 50px 20px;
+  gap: 30px;
+}
+
+.project-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border: 2px solid whitesmoke;
+  border-radius: 2vw;
+  background-color: rgb(17, 17, 17);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+}
+
+.project-layout:hover {
+  background-color: black;
+  transform: perspective(800px) rotateY(20deg);
+  box-shadow: 0 0 20px white;
+}
+
+.project-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.project-title,
+.project-description {
+  text-align: center;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+/*CONTACT*/
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  padding: 90px 50px;
+  margin: 50px 20px;
+  border: 2px solid whitesmoke;
+  border-radius: 2vw;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    inset 0 0 15px rgba(255, 255, 255, 0.8);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.contact-container:hover {
+  transform: scale(1.008);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9),
+    inset 0px 0px 30px rgba(255, 255, 255, 0.9);
+}
+
+.contact-container h2 {
+  text-align: center;
+  font-size: 45px;
+  color: white;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.contact-container h2:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0 0 15px white);
+}
+
+.contact-layout {
+  width: 100%;
+  align-self: flex-start;
+  margin-top: 50px;
+  padding: 40px;
+  color: white;
+}
+
+.contact-layout ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.contact-layout ul li a,
+.contact-layout ul li p {
+  display: inline-block;
+  color: white;
+  transition: transform 0.5s ease;
+}
+
+.contact-layout ul li a:hover,
+.contact-layout ul li p:hover {
+  transform: scale(1.05);
+}
