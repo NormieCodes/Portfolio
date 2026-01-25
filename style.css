@@ -411,11 +411,6 @@ body {
       display: flex;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-    .all-skills::-webkit-scrollbar {
-      display: none;
     }
     .skill-logo {
       flex: 0 0 80%;
@@ -433,11 +428,7 @@ body {
       display: flex;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-    .all-projects::-webkit-scrollbar {
-      display: none;
+      padding: 20px 0;
     }
     .project-layout {
       flex: 0 0 95%;
@@ -482,8 +473,13 @@ body {
     .project-description {
       text-align: left;
       line-height: 1.6;
-      font-size: 10px;
+      font-size: 13px;
       padding: 0 10px;
+      display: -webkit-box;
+      line-clamp: 6;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
     .contact-container {
       filter: drop-shadow(0 0 15px white);
