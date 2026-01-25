@@ -22,7 +22,8 @@
   <!--Navigation Bar-->
     <header>
       <nav class="navbar">
-          <ul id="font" class="navlist">
+          
+          <ul class="font navlist">
             <li><a href="#home">Home</a></li>
             <li><a href="#aboutme">About Me</a></li>
             <li><a href="#skill">Skills</a></li>
@@ -35,61 +36,61 @@
     <!--Hero Section-->
     <section id="home" class="hero">
       <div class="lefthero">
-        <h1 id="font">Hello, I am <span class="highlight" >Rishi Sagaram</span>.</h1>
+        <h1 class="font">Hello, I am <span class="highlight" >Rishi Sagaram</span>.</h1>
         <br>
-        <h2 id="font">B.Tech 2<sup>nd</sup> Year Student.</h2>
-        <p id="font">I am Interested in Fullstack.</p>
+        <h2 class="font">B.Tech 2<sup>nd</sup> Year Student.</h2>
+        <p class="font">I am Interested in Fullstack.</p>
       </div>
-      <div class="righthero"><img src="/Assets/rishi.jpeg" alt="Rishi's profile pic"></div>
+      <div class="righthero"><img src="Assets/rishi.jpeg" alt="Rishi's profile pic"></div>
     </section>
 
     <section id="aboutme" class="about">
-      <h2 id="font" style="font-size: 30px;">About Me</h2>
+      <h2 class="font" style="font-size: 30px;">About Me</h2>
       <p draggable="false">I am Rishi Sagaram, a dedicated 2nd-year student at UPES Dehradun with a passion for Fullstack Development. I am currently honing my expertise in the core fundamentals of HTML, CSS, and JavaScript, maintaining a disciplined daily routine to master the building blocks of the web. My immediate roadmap involves transitioning into the MERN Stack to build robust, end-to-end applications and explore advanced programming architectures.
       <br>
       While I am currently focused on intensive learning and skill acquisition, I am about to begin a series of comprehensive projects that apply these technologies in real-world scenarios. You can explore my development journey and view my latest work-in-progress by scrolling down below.</p>
     </section>
     
     <section id="skill" class="skills-container">
-      <h2 id="font">Skills</h2>
+      <h2 class="font">Skills</h2>
       <div class="all-skills">
         <div class="skill-logo">
-          <img src="../Assets/html.png" alt="html logo">
+          <img src="Assets/html.png" alt="html logo">
           <div class="skill-name"><p>HTML</p></div>
         </div>
         
         <div class="skill-logo">
-          <img src="../Assets/css.png" alt="css logo">
+          <img src="Assets/css.png" alt="css logo">
           <div class="skill-name">CSS</div>
         </div>
 
         <div class="skill-logo">
-          <img src="../Assets/js.png" alt="js logo">
+          <img src="Assets/js.png" alt="js logo">
           <div class="skill-name">JS</div>
         </div>
 
         <div class="skill-logo">
-          <img src="../Assets/c.png" alt="c logo">
+          <img src="Assets/c.png" alt="c logo">
           <div class="skill-name">C</div>
         </div>
 
         <div class="skill-logo">
-          <img src="../Assets/python.png" alt="python logo">
+          <img src="Assets/python.png" alt="python logo">
           <div class="skill-name">Python</div>
         </div>
 
         <div class="skill-logo">
-          <img src="../Assets/figma.png" alt="figma logo">
+          <img src="Assets/figma.png" alt="figma logo">
           <div class="skill-name">Figma</div>
         </div>
 
         <div class="skill-logo">
-          <img src="../Assets/canva.png" alt="canva logo">
+          <img src="Assets/canva.png" alt="canva logo">
           <div class="skill-name">Canva</div>
         </div>
 
         <div class="skill-logo">
-          <img src="../Assets/java.png" alt="java logo">
+          <img src="Assets/java.png" alt="java logo">
           <div class="skill-name">Java</div>
         </div>
       </div>
@@ -97,7 +98,7 @@
 
 <!--Project Section  -->
     <section id="projects" class="projects-container">
-      <h2 id="font">Projects</h2>
+      <h2 class="font">Projects</h2>
       <div class="all-projects">
         <div class="project-layout">
           <p class="project-title">Restaurant Webapp</p>
@@ -120,14 +121,23 @@
     </section>
 <!-- Contact Me Section -->
     <footer id="contact" class="contact-container">
-      <h2 id="font">Contact Me</h2>
+      <h2 class="font">Contact Me</h2>
       <div class="contact-layout">
         <ul>
-          <li ><a id="font" href="https://github.com/NormieCodes">GitHub</a></li>
-          <li><a id="font" href="https://www.linkedin.com/in/rishi-sagaram-527471325/">LinkedIn</a></li>
-          <li id="font"><p>Gmail: rishisagaram5@gmail.com</p></li>
+          <li ><a class="font" href="https://github.com/NormieCodes">GitHub</a></li>
+          <li><a class="font" href="https://www.linkedin.com/in/rishi-sagaram-527471325/">LinkedIn</a></li>
+          <li class="font"><p>Gmail: rishisagaram5@gmail.com</p></li>
         </ul>
       </div>
     </footer>
+
+  <script>
+    const navbar = document.querySelector(".navbar");
+    const btn = document.querySelector(".hamburger-btn");
+
+    btn.addEventListener("click", ()=> {
+      navbar.classlist.toggle("open");
+    });
+  </script>
 </body>
 </html>
