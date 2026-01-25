@@ -5,7 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-#font {
+.font {
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -23,8 +23,8 @@ body {
   overflow: hidden;
   width: 100%;
   z-index: 999;
-  justify-content: flex-end;
   display: flex;
+  justify-content: flex-start;
   position: fixed;
   align-items: center;
   background-color: black;
@@ -33,27 +33,30 @@ body {
   border-bottom-left-radius: 10vw;
   border-bottom-right-radius: 10vw;
   box-shadow: 0 0 30px red;
-  transition: all 0.5s ease;
+  transition: box-shadow 0.5s ease;
 }
 .navbar:hover {
   box-shadow: 0 0 45px red;
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 .navbar .navlist {
   display: flex;
+  margin-left: auto;
   gap: 20px;
+  /* background-color: tan; */
 }
 
 .navbar .navlist a {
+  display: inline-block;
   color: white;
   font-size: 16px;
-  transition: all 0.5s ease;
+  transition: color 0.5s ease, transform 0.5s ease;
 }
 .navbar .navlist a:hover {
   color: red;
-  font-size: larger;
-  transition: all 0.3s ease;
+  transform: scale(1.05);
 }
+
 
 .hero {
   display: flex;
@@ -83,11 +86,13 @@ body {
 }
 
 .highlight {
+  display: inline-block;
   color: red;
-  transition: all .5s ease;
+  filter: drop-shadow(0 0 10px rgba(155, 16, 16, 0));
+  transition: all 0.5s ease;
 }
 .highlight:hover {
-  font-size: 3.1rem;
+  transform: scale(1.01);
   color: red;
   filter: drop-shadow(0 0 10px rgba(155, 16, 16, 0.8));
   transition: all .5s ease;
@@ -104,14 +109,16 @@ body {
   aspect-ratio: 1/1;
   border-radius: 50%;
   border: 5px solid white;
-  transition: all .5s ease;
+  filter: drop-shadow(0px 5px 20px rgba(152, 152, 152, 0));
+  transition: border .5s ease, transform 0.5s ease, filter 0.3s ease;
 }
 
 .righthero img:hover {
-  transform: scale(1.1);
+  transform: scale(1.01);
   filter: drop-shadow(0px 5px 20px rgba(152, 152, 152, 0.8));
   transition: all .2s ease;
 }
+
 
 .about {
   display: flex;
@@ -131,7 +138,6 @@ body {
 .about:hover {
   transform: scale(1.008);
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9),inset 0px 0px 30px rgba(7, 198, 140, 0.9);
-  transition: all 0.3s ease;
 }
 .about h2, .about p {
   display: flex;
@@ -141,7 +147,6 @@ body {
 .about h2:hover {
   color: rgba(7, 198, 140, 0.8);
   filter: drop-shadow(0, 0, 15px, rgba(4, 101, 72, 0.8));
-  transition: all 0.3s ease;
 }
 
 .skills-container {
@@ -159,7 +164,6 @@ body {
 .skills-container:hover {
   transform: scale(1.008);
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9), inset 0px 0px 30px rgba(174, 0, 255, 0.9);
-  transition: all 0.3s ease;
 }
 .skills-container h2 {
   display: inline-block;
@@ -171,7 +175,6 @@ body {
 .skills-container h2:hover {
   color: rgba(174, 0, 255, 0.9);
   filter: drop-shadow(0, 0, 15px, rgba(68, 4, 97, 0.9));
-  transition: all 0.3s ease;
 }
 
 .all-skills {
@@ -204,7 +207,6 @@ body {
   transform: scale(1.08);
   transform: rotate(5deg);
   box-shadow: 0 0 20px white;
-  transition: all 0.2s ease-out;
 }
 
 .skill-logo img{
@@ -238,23 +240,22 @@ body {
 .projects-container:hover {
   transform: scale(1.008);
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9), inset 0px 0px 30px rgba(255, 55, 5, 0.9);
-  transition: all 0.3s ease;
 }
 .projects-container h2 {
   display: inline-block;
   font-size: 45px;
   color: white;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .projects-container h2:hover {
-  font-size: 46px;
+  transform: scale(1.01);
   color: rgba(255, 55, 5, 0.9);
-  transition: all 0.3s ease;
 }
 
 .all-projects {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   padding: 50px 20px;
   gap: 30px;
@@ -265,7 +266,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 400px;
   gap: 15px;
   padding: 20px;
   border: 2px solid whitesmoke;
@@ -280,7 +280,6 @@ body {
   background-color: black;
   transform: perspective(800px) rotateY(20deg);
   box-shadow: 0 0 20px white;
-  transition: all 0.2s ease-out;
 }
 
 .project-title {
@@ -312,7 +311,6 @@ body {
 .contact-container:hover {
   transform: scale(1.008);
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9), inset 0px 0px 30px rgba(255, 255, 255, 0.9);
-  transition: all 0.3s ease;
 }
 
 .contact-container h2 {
@@ -325,7 +323,6 @@ body {
 .contact-container h2:hover {
   transform: scale(1.02);
   filter: drop-shadow(0 0 15px white);
-  transition: all 0.3s ease;
 }
 .contact-layout {
   width: 100%;
@@ -359,3 +356,131 @@ body {
 .contact-layout ul li p:hover {
   transform: scale(1.05);
 }
+
+@media (max-width : 648px) {
+    .navbar {
+      padding: 12px 10px;
+      
+    }
+    .navbar .navlist {
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-right: auto;
+      justify-content: center;
+    }
+    .navbar .navlist a{
+      font-size: 14px;
+    }
+
+    .hero {
+      flex-direction: column-reverse;
+      height: auto;
+      gap: 20px;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .lefthero, .righthero {
+      width: 100%;
+      padding: 0;
+    }
+    .righthero {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .righthero img {
+      filter: drop-shadow(0px 5px 20px rgba(152, 152, 152, 0.8));
+    }
+    h1 {
+      font-size: 2rem;
+  }
+  
+  .about {
+    padding: 25px;
+    }
+    .about h2, .about p {
+      flex-wrap: wrap;
+      max-width: fit-content;
+    }
+    .skills-container {
+      margin: 25px;
+      padding: 25px;
+    }
+
+    .all-skills {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .all-skills::-webkit-scrollbar {
+      display: none;
+    }
+    .skill-logo {
+      flex: 0 0 80%;
+    }
+    .projects-container {
+      padding: 70px 30px;
+      margin: 25px;
+      gap: 25px;
+    }
+
+    .projects-container h2 {
+      font-size: 30px;
+    }
+    .all-projects {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .all-projects::-webkit-scrollbar {
+      display: none;
+    }
+    .project-layout {
+      flex: 0 0 100%;
+      flex-basis: 90%;
+      scroll-snap-align: start;
+      gap: 10px;
+    }
+    .project-title {
+      margin-bottom: 10px;
+    }
+    
+    .contact-container {
+      padding: 70px 30px;
+      margin: 25px;
+    }
+    .contact-container h2 {
+      font-size: 30px;
+      
+    }
+    .projects-container h2:hover, .skills-container h2:hover, .about h2:hover, .highlight:hover, .righthero img:hover, .contact-container h2:hover {
+    transform: none !important;
+    filter: none !important;
+    }
+    .righthero img:hover{
+      filter: drop-shadow(0px 5px 20px rgba(152, 152, 152, 0.8)) !important;
+    }
+
+    .about h2 {
+      color: rgba(7, 198, 140, 0.8);
+      filter: drop-shadow(0, 0, 15px, rgba(4, 101, 72, 0.8));
+    }
+
+    .skills-container h2 {
+      color: rgba(174, 0, 255, 0.9);
+      filter: drop-shadow(0 0 15px rgba(68, 4, 97, 0.9));
+    }
+
+    .projects-container h2 {
+    color: rgba(255, 55, 5, 0.9);
+    filter: drop-shadow(0, 0, 15px, rgba(125, 5, 5, 0.9));
+    }
+    .contact-container {
+      filter: drop-shadow(0 0 15px white);
+    }
+
+  }
